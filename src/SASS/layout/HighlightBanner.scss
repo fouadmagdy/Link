@@ -1,0 +1,32 @@
+.highlightBannerContainer {
+  .category {
+    color: #f215b6;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: bold;
+  }
+  .title {
+    color: #181e4b;
+    font-size: 75px;
+    font-weight: bold;
+    font-family: Volkhov;
+    position: relative;
+    .decore-img {
+      position: absolute;
+      top: 3rem;
+      left: 40%;
+      z-index: -1;
+    }
+  }
+  .brief {
+    color: #5e6282;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .slider-img {
+    position: absolute;
+    top: -16rem;
+  }
+}

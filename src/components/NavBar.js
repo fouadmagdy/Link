@@ -3,12 +3,11 @@ import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import ICONS from "../helpers/icons";
 export default function NavBar() {
   return (
-    <Navbar bg="light" expand="lg" className="navbar-component">
+    <Navbar expand="lg" className="navbar-component">
       <Navbar.Brand href="#home">
         <img
           src={ICONS.linkLogo}
           alt="logo"
-          height="30"
           className="d-inline-block align-top"
         />
       </Navbar.Brand>
