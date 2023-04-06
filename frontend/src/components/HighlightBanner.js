@@ -30,7 +30,10 @@ export default function HighlightBanner() {
         {!loading && filteredSlide && (
           <>
             <Col lg={5}>
-              <h6 className="category font-weight-bold">
+              <h6
+                className="category font-weight-bold"
+                style={{ color: `#${filteredSlide?.colorCode}` }}
+              >
                 {filteredSlide?.category}
               </h6>
               <h5 className="title">
@@ -65,6 +68,7 @@ export default function HighlightBanner() {
       <Row>
         <BannerPagination
           slidersInfo={sliders}
+          activeSlide={activeSlide}
           setActiveSlide={setActiveSlide}
         />
       </Row>
