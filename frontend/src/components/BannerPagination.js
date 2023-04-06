@@ -1,22 +1,18 @@
 import React from "react";
 
-export default function BannerPagination() {
+export default function BannerPagination({ slidersInfo, setActiveSlide }) {
   return (
     <div className="pagination-container">
-      <button
-        className="dot"
-        //   onClick={() => onPageChange(pageNumber)}
-      ></button>
-
-      <button
-        className="dot"
-        //   onClick={() => onPageChange(pageNumber)}
-      ></button>
-
-      <button
-        className="dot"
-        //   onClick={() => onPageChange(pageNumber)}
-      ></button>
+      {slidersInfo
+        .sort((a, b) => a.order - b.order)
+        .map((slide) => (
+          <button
+            target="_blank"
+            className="dot"
+            onClick={() => setActiveSlide(slide.order)}
+            style={{ backgroundColor: `#${slide.colorCode}` }}
+          ></button>
+        ))}
     </div>
   );
 }

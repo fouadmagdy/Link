@@ -1,46 +1,73 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { listSlider } from "../actions/sliderActions";
 import ICONS from "../helpers/icons";
 import OrangeButton from "./OrangeButton";
 import BannerPagination from "./BannerPagination";
 import { Row, Col } from "react-bootstrap";
+import URLS from "../helpers/urls";
 
 export default function HighlightBanner() {
   const dispatch = useDispatch();
   const sliderList = useSelector((state) => state.sliderList);
   const { loading, sliders } = sliderList;
-  console.log("sliders", sliders);
+  const [activeSlide, setActiveSlide] = useState(1);
+
+  const filteredSlide = useMemo(() => {
+    if (!sliders || !sliders.length) {
+      return;
+    }
+    return sliders.find((slide) => slide.order === activeSlide);
+  }, [activeSlide, sliders]);
 
   useEffect(() => {
     dispatch(listSlider());
   }, [dispatch]);
 
   return (
-    <Row className="highlightBannerContainer mt-5">
-      <Col lg={6}>
-        <h6 className="category font-weight-bold">Marking</h6>
-        <h5 className="title">
-          25 Years of Bussiness growth
-          <span>
-            <img className="decore-img" src={ICONS.decore} alt="decore" />
-          </span>
-        </h5>
-        <p className="brief">
-          Link Development, the global technology solutions provider and an A15
-          company, unveiled today that it has recently marked its Silver Jubilee
-          anniversary.
-        </p>
-        <div>
-          <OrangeButton content="Find out more" />
-          <img src={ICONS.playDemo} alt="play video" className="mx-4" />
-        </div>
-      </Col>
-      <Col lg={6}>
-        <img src={ICONS.slider1} className="slider-img" alt="woman" />
-      </Col>
-
-      <BannerPagination />
-    </Row>
+    <>
+      <Row className="highlightBannerContainer mt-5">
+        {!loading && filteredSlide && (
+          <>
+            <Col lg={5}>
+              <h6 className="category font-weight-bold">
+                {filteredSlide?.category}
+              </h6>
+              <h5 className="title">
+                {filteredSlide?.title}
+                <span>
+                  <img
+                    className="decore-img"
+                    src={ICONS[`decore${filteredSlide?.order}`]}
+                    alt="decore"
+                  />
+                </span>
+              </h5>
+              <p className="brief">{filteredSlide?.brief}</p>
+              <div>
+                <OrangeButton
+                  content="Find out more"
+                  url={filteredSlide?.itemUrl}
+                />
+                <img src={ICONS.playDemo} alt="play video" className="mx-4" />
+              </div>
+            </Col>
+            <Col lg={7}>
+              <img
+                src={`${URLS.iconsBaseUrl}/${filteredSlide?.imgUrl}`}
+                className="slider-img"
+                alt="woman"
+              />
+            </Col>
+          </>
+        )}
+      </Row>
+      <Row>
+        <BannerPagination
+          slidersInfo={sliders}
+          setActiveSlide={setActiveSlide}
+        />
+      </Row>
+    </>
   );
 }
