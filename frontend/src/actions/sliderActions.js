@@ -6,11 +6,11 @@ import {
   SLIDER_LIST_FAIL,
 } from "../constants/sliderConstants";
 
-export const listSLIDER = () => async (dispatch) => {
+export const listSlider = () => async (dispatch) => {
   try {
     dispatch({ type: SLIDER_LIST_REQUEST });
 
-    const { data } = await axios.get("/SLIDERapi");
+    const { data } = await axios.get("/sliders");
 
     dispatch({
       type: SLIDER_LIST_SUCCESS,

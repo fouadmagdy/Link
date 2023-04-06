@@ -5,7 +5,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { slidersListReducer } from "./reducers/sliderReducers";
 
 const reducer = combineReducers({
-  newsList: slidersListReducer,
+  sliderList: slidersListReducer,
 });
 
 const middleware = [thunk];

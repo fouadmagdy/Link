@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { listSlider } from "../actions/sliderActions";
 import ICONS from "../helpers/icons";
 import OrangeButton from "./OrangeButton";
 import BannerPagination from "./BannerPagination";
 import { Row, Col } from "react-bootstrap";
 
 export default function HighlightBanner() {
+  const dispatch = useDispatch();
+  const sliderList = useSelector((state) => state.sliderList);
+  const { loading, sliders } = sliderList;
+  console.log("sliders", sliders);
+
+  useEffect(() => {
+    dispatch(listSlider());
+  }, [dispatch]);
+
   return (
     <Row className="highlightBannerContainer mt-5">
       <Col lg={6}>
