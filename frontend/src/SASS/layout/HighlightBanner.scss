@@ -3,14 +3,14 @@
   .category {
     color: #f215b6;
     font-size: 20px;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
   }
   .title {
     color: #181e4b;
     font-size: 75px;
     font-weight: bold;
-    font-family: Volkhov;
+    font-family: "Volkhov";
     position: relative;
     .decore-img {
       position: absolute;
@@ -21,7 +21,7 @@
   }
   .brief {
     color: #5e6282;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-weight: 500;
   }

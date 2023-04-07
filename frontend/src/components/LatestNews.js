@@ -86,13 +86,13 @@ export default function LatestNews() {
                         height={220}
                         alt="Image"
                       />
-                      <Card.Body>
+                      <Card.Body className="d-flex flex-column">
                         <Card.Title>{cutLongWords(card.title, 100)}</Card.Title>
                         <div className="card-date d-flex my-2">
                           <i class="fa-light fa-calendar"></i>
                           Wed 12 Aug 2022
                         </div>
-                        <div className="card-category-share-addToFavourite">
+                        <div className="card-category-share-addToFavourite mt-auto">
                           <span>
                             {categoriesState &&
                               categoriesState[+card.categoryID - 1]?.name}
