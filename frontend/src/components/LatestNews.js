@@ -23,17 +23,16 @@ export default function LatestNews() {
     setActiveTab(tab);
   }, []);
 
+  const filteredCards = useMemo(() => {
+    return activeTab === "all"
+      ? news?.News?.slice(0, pageSize)
+      : news?.News?.filter((card) => card.categoryID === activeTab.toString());
+  }, [activeTab, news?.News, pageSize]);
+
   const incPageSize = useCallback(() => {
     setShowLoadMoreBtn(false);
     setPageSize((prevState) => prevState + news?.News?.length);
   }, [news]);
-
-  const filteredCards = useMemo(() => {
-    return activeTab === "all"
-      ? news?.News?.slice(0, pageSize)
-      : news?.News.filter((card) => card.categoryID === activeTab.toString());
-  }, [activeTab, news?.News, pageSize]);
-  console.log("filteredCards", filteredCards);
 
   useEffect(() => {
     dispatch(listCategory());
@@ -41,7 +40,7 @@ export default function LatestNews() {
   }, [dispatch]);
 
   useEffect(() => {
-    setCategoriesState(categories.newsCategory);
+    setCategoriesState(categories?.newsCategory);
   }, [categories]);
 
   return (
@@ -95,7 +94,8 @@ export default function LatestNews() {
                         </div>
                         <div className="card-category-share-addToFavourite">
                           <span>
-                            {categoriesState[+card.categoryID - 1].name}
+                            {categoriesState &&
+                              categoriesState[+card.categoryID - 1]?.name}
                           </span>
                           <div>
                             <i class="fa-light fa-heart"></i>
