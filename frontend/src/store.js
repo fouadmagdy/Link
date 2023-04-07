@@ -4,10 +4,12 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import { slidersListReducer } from "./reducers/sliderReducers";
 import { categoriesListReducer } from "./reducers/categoryReducers";
+import { newsListReducer } from "./reducers/newsListReducers";
 
 const reducer = combineReducers({
   sliderList: slidersListReducer,
   categoryList: categoriesListReducer,
+  newsList: newsListReducer,
 });
 
 const middleware = [thunk];
