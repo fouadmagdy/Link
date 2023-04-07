@@ -3,9 +3,11 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 import { slidersListReducer } from "./reducers/sliderReducers";
+import { categoriesListReducer } from "./reducers/categoryReducers";
 
 const reducer = combineReducers({
   sliderList: slidersListReducer,
+  categoryList: categoriesListReducer,
 });
 
 const middleware = [thunk];

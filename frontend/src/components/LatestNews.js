@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Nav, Card } from "react-bootstrap";
-
+import { useDispatch, useSelector } from "react-redux";
+import { listCategory } from "../actions/categoryActions";
 const cards = [
   {
     id: "1",
@@ -18,6 +19,10 @@ const cards = [
 ];
 
 export default function LatestNews() {
+  const dispatch = useDispatch();
+  const categoryList = useSelector((state) => state.categoryList);
+  const { loading, categories } = categoryList;
+
   const [activeTab, setActiveTab] = useState("all");
 
   const handleTabClick = (tab) => {
@@ -28,6 +33,10 @@ export default function LatestNews() {
     activeTab === "all"
       ? cards
       : cards.filter((card) => card.category === activeTab);
+
+  useEffect(() => {
+    dispatch(listCategory());
+  }, [dispatch]);
 
   return (
     <main className="latestNews-container">
@@ -43,12 +52,13 @@ export default function LatestNews() {
             <Nav.Item>
               <Nav.Link eventKey="all">All news</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="category1">Category 1</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="category2">Category 2</Nav.Link>
-            </Nav.Item>
+            {!loading &&
+              categories &&
+              categories.newsCategory?.map((cat) => (
+                <Nav.Item index={cat.name}>
+                  <Nav.Link eventKey={`category${cat.id}`}>{cat.name}</Nav.Link>
+                </Nav.Item>
+              ))}
           </Nav>
 
           <div className="card-container my-5">
