@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import URLS from "../helpers/urls";
 import {
   SLIDER_LIST_REQUEST,
   SLIDER_LIST_SUCCESS,
@@ -10,7 +10,7 @@ export const listSlider = () => async (dispatch) => {
   try {
     dispatch({ type: SLIDER_LIST_REQUEST });
 
-    const { data } = await axios.get("/sliders");
+    const { data } = await axios.get(URLS.slidersBaseUrl);
 
     dispatch({
       type: SLIDER_LIST_SUCCESS,

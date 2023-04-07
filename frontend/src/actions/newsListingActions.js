@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import URLS from "../helpers/urls";
 import {
   NEWS_LIST_REQUEST,
   NEWS_LIST_SUCCESS,
@@ -10,9 +10,7 @@ export const newsListCategory = () => async (dispatch) => {
   try {
     dispatch({ type: NEWS_LIST_REQUEST });
 
-    const { data } = await axios.get(
-      "https://api.npoint.io/d275425a434e02acf2f7"
-    );
+    const { data } = await axios.get(URLS.newsListingBaseUrl);
 
     dispatch({
       type: NEWS_LIST_SUCCESS,

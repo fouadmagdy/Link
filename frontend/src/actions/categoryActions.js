@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import URLS from "../helpers/urls";
 import {
   CATEGORY_LIST_REQUEST,
   CATEGORY_LIST_SUCCESS,
@@ -10,9 +10,7 @@ export const listCategory = () => async (dispatch) => {
   try {
     dispatch({ type: CATEGORY_LIST_REQUEST });
 
-    const { data } = await axios.get(
-      "https://api.npoint.io/91298d970c27e9a06518"
-    );
+    const { data } = await axios.get(URLS.categoryBaseUrl);
 
     dispatch({
       type: CATEGORY_LIST_SUCCESS,
