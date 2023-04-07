@@ -1,0 +1,84 @@
+.things-we-do {
+  background: url(../../images/ThingsWeDo.png) no-repeat;
+  background-size: auto;
+  background-position: -100px 0;
+
+  height: 90vh;
+  background-color: #efefef;
+
+  .imagesContainers {
+    z-index: 2;
+    margin-left: 5rem;
+    width: 100%;
+
+    .img-container {
+      position: relative;
+      overflow: hidden;
+      background-color: rgba(22, 42, 105, 0.5);
+      img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+      }
+      .readMore {
+        position: absolute;
+        color: #fff;
+        left: 1.3rem;
+        bottom: 1rem;
+        display: none;
+      }
+
+      .img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        background-color: rgba(22, 42, 105, 0.5);
+      }
+
+      // &:hover img {
+      //   transform: translateY(5px);
+      // }
+
+      &:hover .readMore {
+        display: block;
+      }
+
+      &:hover .img-overlay {
+        opacity: 1;
+      }
+    }
+
+    .third-col {
+      margin-bottom: 14rem;
+    }
+  }
+
+  .things-we-do-desc {
+    background-color: #f215b6;
+    height: 50%;
+    z-index: 1;
+    margin-left: -27rem;
+    h2 {
+      font-family: Poppins;
+      font-weight: bold;
+      font-size: 3.2rem;
+      line-height: 1.45;
+      text-align: right;
+      color: #253776;
+      margin-right: 3rem;
+    }
+    p {
+      font-family: OpenSans;
+      font-size: 1.8rem;
+      line-height: 1.32;
+      color: #fff;
+      text-align: right;
+      margin-left: 24rem;
+      margin-right: 3rem;
+    }
+  }
+}

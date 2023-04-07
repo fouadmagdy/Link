@@ -4,7 +4,7 @@ import { listSlider } from "../actions/sliderActions";
 import ICONS from "../helpers/icons";
 import OrangeButton from "./OrangeButton";
 import BannerPagination from "./BannerPagination";
-import { Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import URLS from "../helpers/urls";
 
 export default function HighlightBanner() {
@@ -25,7 +25,7 @@ export default function HighlightBanner() {
   }, [dispatch]);
 
   return (
-    <>
+    <Container>
       <Row className="highlightBannerContainer mt-5">
         {!loading && filteredSlide && (
           <>
@@ -72,6 +72,6 @@ export default function HighlightBanner() {
           setActiveSlide={setActiveSlide}
         />
       </Row>
-    </>
+    </Container>
   );
 }
