@@ -8,14 +8,18 @@ export default function Footer() {
       <Container>
         <Row>
           <Col xs={12} md={3}>
-            <img src={ICONS.linkLogo} className="img-fluid" alt="link logo" />
-            <p>
+            <img
+              src={ICONS.linkLogo}
+              className="img-fluid mb-4"
+              alt="link logo"
+            />
+            <p className="footer-desc">
               We make technology produce productive, adaptable and sustainable
               business experiences.
             </p>
           </Col>
           <Col xs={12} md={2}>
-            <h6>Company</h6>
+            <h5>Company</h5>
             <ul className="list-unstyled">
               <li>About</li>
               <li>Careers</li>
@@ -23,7 +27,7 @@ export default function Footer() {
             </ul>
           </Col>
           <Col xs={12} md={2}>
-            <h6>Contact</h6>
+            <h5>Contact</h5>
             <ul className="list-unstyled">
               <li>Help/FAQ</li>
               <li>Press</li>
@@ -31,14 +35,59 @@ export default function Footer() {
             </ul>
           </Col>
           <Col xs={12} md={2}>
-            <h6>Media</h6>
+            <h5>Media</h5>
             <ul className="list-unstyled">
               <li>News</li>
               <li>Photo</li>
               <li>Video</li>
             </ul>
           </Col>
-          <Col xs={12} md={3}></Col>
+          <Col xs={12} md={3}>
+            <div className="socialMedia-navs">
+              <ul class="list-unstyled">
+                <li class="d-inline">
+                  <img
+                    src={ICONS.fbIcon}
+                    className="img-fluid"
+                    alt="facebook icon"
+                  />
+                </li>
+                <li class="d-inline">
+                  <img
+                    src={ICONS.instagramIcon}
+                    className="img-fluid"
+                    alt="instagram icon"
+                  />
+                </li>
+                <li class="d-inline">
+                  <img
+                    src={ICONS.twitterIcon}
+                    className="img-fluid"
+                    alt="twitter icon"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div className="discover-our-app">
+              <p>Discover our app</p>
+              <ul className="list-unstyled">
+                <li class="d-inline">
+                  <img
+                    src={ICONS.playstore}
+                    className="img-fluid"
+                    alt="play store"
+                  />
+                </li>
+                <li class="d-inline">
+                  <img
+                    src={ICONS.googlePlay}
+                    className="img-fluid"
+                    alt="google play"
+                  />
+                </li>
+              </ul>
+            </div>
+          </Col>
         </Row>
       </Container>
     </footer>

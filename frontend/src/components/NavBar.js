@@ -21,7 +21,7 @@ export default function NavBar() {
             <Nav.Link href="#about">News</Nav.Link>
             <Nav.Link href="#about">Contact us</Nav.Link>
           </Nav>
-          <Nav>
+          <Nav className="d-flex align-items-center">
             <Nav.Link href="#login">Login</Nav.Link>
             <Nav.Link href="#register">
               <Button variant="outline-secondary">Sign up</Button>

@@ -57,3 +57,11 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .latestNews-container {
+    .nav-item {
+      margin-bottom: 1rem;
+    }
+  }
+}

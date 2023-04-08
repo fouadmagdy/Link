@@ -1,3 +1,24 @@
 .footer-container {
   padding: 3rem 0;
+  font-family: "Poppins", sans-serif;
+
+  .footer-desc {
+    color: #5e6282;
+  }
+
+  h5 {
+    font-weight: bold;
+  }
+
+  .discover-our-app {
+    img:first-child {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-container {
+    text-align: center;
+  }
 }

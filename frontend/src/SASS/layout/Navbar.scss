@@ -1,11 +1,12 @@
-.navbar-component{
-    img {
-        width: 190px;
-        height: 72px;
+.navbar-component {
+  img {
+    width: 190px;
+    height: 72px;
+  }
+  #basic-navbar-nav {
+    a {
+      color: #212832;
+      margin-right: 1.5rem;
     }
-    #basic-navbar-nav {
-        a {
-            color: #212832;
-        }
-    }
+  }
 }

@@ -19,6 +19,11 @@ const ICONS = {
   calenderIcon: `${URLS.iconsBaseUrl}/calender-icon.png`,
   heartIcon: `${URLS.iconsBaseUrl}/heart-icon.png`,
   shareIcon: `${URLS.iconsBaseUrl}/share-icon.png`,
+  fbIcon: `${URLS.iconsBaseUrl}/social1.svg`,
+  instagramIcon: `${URLS.iconsBaseUrl}/social2.svg`,
+  twitterIcon: `${URLS.iconsBaseUrl}/social3.svg`,
+  playstore: `${URLS.iconsBaseUrl}/PlayStore.png`,
+  googlePlay: `${URLS.iconsBaseUrl}/GooglePlay.png`,
 };
 
 export default ICONS;
