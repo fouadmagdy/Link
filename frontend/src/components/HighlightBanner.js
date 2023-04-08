@@ -41,7 +41,7 @@ export default function HighlightBanner() {
                 {filteredSlide?.title}
                 <span>
                   <img
-                    className="decore-img"
+                    className="decore-img img-fluid"
                     src={ICONS[`decore${filteredSlide?.order}`]}
                     alt="decore"
                   />
@@ -54,7 +54,11 @@ export default function HighlightBanner() {
                   url={filteredSlide?.itemUrl}
                 />
                 <a href={filteredSlide?.videoUrl}>
-                  <img src={ICONS.playDemo} alt="play video" className="mx-4" />
+                  <img
+                    src={ICONS.playDemo}
+                    alt="play video"
+                    className="mx-4 img-fluid"
+                  />
                 </a>
               </div>
               <BannerPagination
@@ -66,7 +70,7 @@ export default function HighlightBanner() {
             <Col lg={6}>
               <img
                 src={`${URLS.iconsBaseUrl}/${filteredSlide?.imgUrl}`}
-                className="slider-img"
+                className="slider-img img-fluid"
                 alt="woman"
               />
               <img
@@ -77,7 +81,7 @@ export default function HighlightBanner() {
                     ? ICONS.decoreBG2
                     : ICONS.decoreBG3
                 }
-                className="slider-bg-img"
+                className="slider-bg-img img-fluid"
                 alt="bg"
               />
             </Col>

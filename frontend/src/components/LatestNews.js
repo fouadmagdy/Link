@@ -47,8 +47,8 @@ export default function LatestNews() {
     <main className="latestNews-container">
       <Container>
         <Row>
-          <h6 className="text-center">Media</h6>
-          <h2 className="text-center">Top News</h2>
+          <h6 className="text-center my-3">Media</h6>
+          <h2 className="text-center font-weight-bold mb-3">Top News</h2>
           <Nav
             activeKey={activeTab}
             onSelect={handleTabClick}

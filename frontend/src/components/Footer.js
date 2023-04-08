@@ -8,7 +8,7 @@ export default function Footer() {
       <Container>
         <Row>
           <Col xs={12} md={3}>
-            <img src={ICONS.linkLogo} alt="link logo" />
+            <img src={ICONS.linkLogo} className="img-fluid" alt="link logo" />
             <p>
               We make technology produce productive, adaptable and sustainable
               business experiences.

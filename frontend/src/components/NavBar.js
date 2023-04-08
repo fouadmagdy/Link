@@ -10,7 +10,7 @@ export default function NavBar() {
           <img
             src={ICONS.linkLogo}
             alt="logo"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top img-fluid"
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

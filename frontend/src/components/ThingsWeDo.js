@@ -6,7 +6,11 @@ export default function ThingsWeDo() {
     <main className="things-we-do d-flex align-items-center">
       <div class="imagesContainers d-flex align-items-center">
         <div className="img-container">
-          <img src={ICONS.thingsWeDo1} alt="things we do 1" />
+          <img
+            src={ICONS.thingsWeDo1}
+            alt="things we do 1"
+            className="img-fluid"
+          />
           <div class="img-overlay"></div>
           <Button variant="outline-none" className="readMore">
             Read More
@@ -15,14 +19,22 @@ export default function ThingsWeDo() {
 
         <div className="d-flex flex-column">
           <div className="img-container">
-            <img src={ICONS.thingsWeDo2} alt="things we do 2" />
+            <img
+              src={ICONS.thingsWeDo2}
+              alt="things we do 2"
+              className="img-fluid"
+            />
             <div class="img-overlay"></div>
             <Button variant="outline-none" className="readMore">
               Read More
             </Button>
           </div>
           <div className="img-container">
-            <img src={ICONS.thingsWeDo3} alt="things we do 3" />
+            <img
+              src={ICONS.thingsWeDo3}
+              alt="things we do 3"
+              className="img-fluid"
+            />
             <div class="img-overlay"></div>
             <Button variant="outline-none" className="readMore">
               Read More
@@ -31,14 +43,22 @@ export default function ThingsWeDo() {
         </div>
         <div className="d-flex flex-column third-col">
           <div className="img-container">
-            <img src={ICONS.thingsWeDo4} alt="things we do 4" />
+            <img
+              src={ICONS.thingsWeDo4}
+              alt="things we do 4"
+              className="img-fluid"
+            />
             <div class="img-overlay"></div>
             <Button variant="outline-none" className="readMore">
               Read More
             </Button>
           </div>
           <div className="img-container">
-            <img src={ICONS.thingsWeDo5} alt="things we do 5" />
+            <img
+              src={ICONS.thingsWeDo5}
+              alt="things we do 5"
+              className="img-fluid"
+            />
             <div class="img-overlay"></div>
             <Button variant="outline-none" className="readMore">
               Read More
