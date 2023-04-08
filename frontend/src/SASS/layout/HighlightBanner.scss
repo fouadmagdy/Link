@@ -46,7 +46,6 @@
     top: -4rem;
     right: -10rem;
     animation: rotate infinite 5s linear;
-
     width: 80%;
   }
 }
@@ -67,12 +66,13 @@
     }
 
     .slider-img {
-      width: 70%;
+      width: 100%;
       height: auto;
     }
 
     .slider-bg-img {
       top: -20rem;
+      right: -29rem;
       width: 100%;
     }
   }
