@@ -41,7 +41,7 @@
     }
 
     .card-body {
-      height: 170px;
+      height: 190px;
       padding: 2rem;
       .card-title {
         color: #5e6282;
@@ -70,7 +70,21 @@
 /* Media query for screens from 992px wide and up */
 @media (min-width: 992px) {
   .latestNews-container {
-    h6 {
+    .card {
+      .card-body {
+        height: 210px;
+        .card-title {
+          font-size: 1.5rem;
+        }
+        .card-date {
+          font-size: 1.2rem;
+        }
+        .card-category-share-addToFavourite {
+          span {
+            font-size: 1rem;
+          }
+        }
+      }
     }
   }
 }

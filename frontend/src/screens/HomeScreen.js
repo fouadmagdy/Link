@@ -12,7 +12,7 @@ const HomeScreen = () => {
       <HighlightBanner />
       {/* <ThingsWeDo /> */}
       <LatestNews />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
