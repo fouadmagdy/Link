@@ -25,8 +25,12 @@ export default function LatestNews() {
 
   const filteredCards = useMemo(() => {
     return activeTab === "all"
-      ? news?.News?.slice(0, pageSize)
-      : news?.News?.filter((card) => card.categoryID === activeTab.toString());
+      ? news?.News?.sort(
+          (a, b) => new Date(b.publishedDate) - new Date(a.publishedDate)
+        )?.slice(0, pageSize)
+      : news?.News?.sort(
+          (a, b) => new Date(b.publishedDate) - new Date(a.publishedDate)
+        )?.filter((card) => card.categoryID === activeTab.toString());
   }, [activeTab, news?.News, pageSize]);
 
   const incPageSize = useCallback(() => {
@@ -93,7 +97,7 @@ export default function LatestNews() {
                             className="img-fluid"
                             alt="calender icon"
                           />
-                          Wed 12 Aug 2022
+                          {card.publishedDate}
                         </div>
                         <div className="card-category-share-addToFavourite mt-auto d-flex justify-content-between">
                           <span>
