@@ -16,6 +16,9 @@ const ICONS = {
   thingsWeDo4: `${URLS.iconsBaseUrl}/thingsWeDo-4.png`,
   thingsWeDo5: `${URLS.iconsBaseUrl}/thingsWeDo-5.png`,
   noImagePreview: `${URLS.iconsBaseUrl}/noImagePreview.png`,
+  calenderIcon: `${URLS.iconsBaseUrl}/calender-icon.png`,
+  heartIcon: `${URLS.iconsBaseUrl}/heart-icon.png`,
+  shareIcon: `${URLS.iconsBaseUrl}/share-icon.png`,
 };
 
 export default ICONS;

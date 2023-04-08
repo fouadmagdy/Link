@@ -74,7 +74,7 @@ export default function LatestNews() {
               {!loadingNews &&
                 filteredCards &&
                 filteredCards?.map((card) => (
-                  <Col xs={12} md={6} lg={4} index={card.id} className="mb-3">
+                  <Col xs={12} md={6} lg={4} index={card.id} className="mb-5">
                     <Card>
                       <Card.Img
                         variant="top"
@@ -83,22 +83,34 @@ export default function LatestNews() {
                           e.target.onerror = null;
                           e.target.src = `${ICONS.noImagePreview}`;
                         }}
-                        height={220}
                         alt="Image"
                       />
                       <Card.Body className="d-flex flex-column">
                         <Card.Title>{cutLongWords(card.title, 100)}</Card.Title>
                         <div className="card-date d-flex my-2">
-                          <i class="fa-light fa-calendar"></i>
+                          <img
+                            src={ICONS.calenderIcon}
+                            className="img-fluid"
+                            alt="calender icon"
+                          />
                           Wed 12 Aug 2022
                         </div>
-                        <div className="card-category-share-addToFavourite mt-auto">
+                        <div className="card-category-share-addToFavourite mt-auto d-flex justify-content-between">
                           <span>
                             {categoriesState &&
                               categoriesState[+card.categoryID - 1]?.name}
                           </span>
                           <div>
-                            <i class="fa-light fa-heart"></i>
+                            <img
+                              src={ICONS.heartIcon}
+                              alt="heart icon"
+                              className="img-fluid"
+                            />
+                            <img
+                              src={ICONS.shareIcon}
+                              alt="share icon"
+                              className="img-fluid"
+                            />
                           </div>
                         </div>
                       </Card.Body>

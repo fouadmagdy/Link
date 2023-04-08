@@ -30,6 +30,8 @@
     .card-img-top {
       border-top-right-radius: 24px;
       border-top-left-radius: 24px;
+      height: 350px;
+      object-fit: cover;
     }
 
     .card-body {
@@ -39,6 +41,9 @@
       }
       .card-date {
         color: #707070;
+        img {
+          margin-right: 0.8rem;
+        }
       }
       .card-category-share-addToFavourite {
         span {
