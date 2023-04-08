@@ -66,12 +66,13 @@
     }
 
     .slider-img {
-      width: 100%;
-      height: auto;
+      width: 50vw;
+      height: 500px;
+      object-fit: contain;
     }
 
     .slider-bg-img {
-      top: -20rem;
+      top: -40rem;
       right: -29rem;
       width: 100%;
     }

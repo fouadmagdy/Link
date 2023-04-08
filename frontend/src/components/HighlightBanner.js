@@ -30,7 +30,7 @@ export default function HighlightBanner() {
       <Row className="highlightBannerContainer mt-5">
         {!loading && filteredSlide && (
           <>
-            <Col xs={12} lg={6} className="d-flex flex-column ">
+            <Col xs={12} lg={5} className="d-flex flex-column ">
               <div className="highlightBannerContent">
                 <h6
                   className="category font-weight-bold"
@@ -64,7 +64,7 @@ export default function HighlightBanner() {
                 </div>
               </div>
             </Col>
-            <Col xs={12} lg={6}>
+            <Col xs={12} lg={7}>
               <img
                 src={`${URLS.iconsBaseUrl}/${filteredSlide?.imgUrl}`}
                 className="slider-img img-fluid"
