@@ -1,7 +1,7 @@
 .highlightBannerContainer {
   height: 100%;
   .highlightBannerContent {
-    height: 640px;
+    height: 330px;
   }
   .category {
     color: #f215b6;
@@ -11,13 +11,14 @@
   }
   .title {
     color: #181e4b;
-    font-size: 75px;
+    font-size: 5rem;
     font-weight: bold;
     font-family: "Volkhov";
     position: relative;
+    padding: 2rem 0;
     .decore-img {
       position: absolute;
-      top: 3rem;
+      top: 4rem;
       left: 40%;
       z-index: -1;
     }
@@ -25,18 +26,54 @@
   .brief {
     color: #5e6282;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
     font-weight: 500;
+  }
+
+  .highlightBanner-actions {
+    text-align: center;
   }
 
   .slider-img {
     z-index: 2;
     position: relative;
+    width: 400px;
+    height: 400px;
   }
   .slider-bg-img {
     position: absolute;
-    top: -20rem;
-    right: -4rem;
+    top: -4rem;
+    right: -10rem;
     animation: rotate infinite 5s linear;
+
+    width: 80%;
+  }
+}
+
+/* Media query for screens from 992px wide and up */
+@media (min-width: 992px) {
+  .highlightBannerContainer {
+    height: 500px;
+
+    .title {
+      font-size: 7rem;
+      .decore-img {
+        top: 5rem;
+      }
+    }
+    .highlightBanner-actions {
+      text-align: left;
+    }
+
+    .slider-img {
+      width: 70%;
+      height: auto;
+    }
+
+    .slider-bg-img {
+      top: -20rem;
+      width: 100%;
+    }
   }
 }

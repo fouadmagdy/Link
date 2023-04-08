@@ -5,4 +5,13 @@
   color: #fff;
   border-color: #ff7c16;
   padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* Media query for screens from 992px wide and up */
+@media (min-width: 992px) {
+  .orange-btn {
+    margin-bottom: 0;
+  }
 }

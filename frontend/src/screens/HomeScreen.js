@@ -10,9 +10,9 @@ const HomeScreen = () => {
     <>
       <NavBar />
       <HighlightBanner />
-      <ThingsWeDo />
+      {/* <ThingsWeDo />
       <LatestNews />
-      <Footer />
+      <Footer /> */}
     </>
   );
 };

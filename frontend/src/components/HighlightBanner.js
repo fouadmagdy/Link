@@ -30,7 +30,7 @@ export default function HighlightBanner() {
       <Row className="highlightBannerContainer mt-5">
         {!loading && filteredSlide && (
           <>
-            <Col lg={6} className="d-flex flex-column">
+            <Col xs={12} lg={6} className="d-flex flex-column ">
               <div className="highlightBannerContent">
                 <h6
                   className="category font-weight-bold"
@@ -49,7 +49,7 @@ export default function HighlightBanner() {
                   </span>
                 </h5>
                 <p className="brief">{filteredSlide?.brief}</p>
-                <div>
+                <div className="highlightBanner-actions">
                   <OrangeButton
                     content="Find out more"
                     url={filteredSlide?.itemUrl}
@@ -63,13 +63,8 @@ export default function HighlightBanner() {
                   </a>
                 </div>
               </div>
-              <BannerPagination
-                slidersInfo={sliders}
-                activeSlide={activeSlide}
-                setActiveSlide={setActiveSlide}
-              />
             </Col>
-            <Col lg={6}>
+            <Col xs={12} lg={6}>
               <img
                 src={`${URLS.iconsBaseUrl}/${filteredSlide?.imgUrl}`}
                 className="slider-img img-fluid"
@@ -90,6 +85,11 @@ export default function HighlightBanner() {
           </>
         )}
       </Row>
+      <BannerPagination
+        slidersInfo={sliders}
+        activeSlide={activeSlide}
+        setActiveSlide={setActiveSlide}
+      />
     </Container>
   );
 }

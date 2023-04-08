@@ -1,5 +1,6 @@
 .pagination-container {
-  margin: 20px 0;
+  margin: 2rem 0;
+  text-align: center;
   .dot {
     position: relative;
     width: 30px;
@@ -35,5 +36,12 @@
     color: #fff;
     width: 40px;
     height: 40px;
+  }
+}
+
+/* Media query for screens from 992px wide and up */
+@media (min-width: 992px) {
+  .pagination-container {
+    text-align: left;
   }
 }
