@@ -73,7 +73,7 @@ export default function LatestNews() {
           <div className="card-container my-5">
             <Row>
               {!loadingNews && filteredCards && filteredCards?.length === 0 && (
-                <h4 className="text-center">No news found</h4>
+                <h3 className="text-center mb-3 ">No news found</h3>
               )}
               {!loadingNews &&
                 filteredCards &&
@@ -99,7 +99,7 @@ export default function LatestNews() {
                           />
                           {formatDate(card.publishedDate)}
                         </div>
-                        <div className="card-category-share-addToFavourite mt-auto d-flex justify-content-between">
+                        <div className="card-category-share-addToFavourite mt-auto d-flex justify-content-between align-items-center">
                           <span>
                             {categoriesState &&
                               categoriesState[+card.categoryID - 1]?.name}
