@@ -1,5 +1,5 @@
 .highlightBannerContainer {
-  height: 450px;
+  height: 100%;
   .category {
     color: #f215b6;
     font-size: 20px;
@@ -27,7 +27,13 @@
   }
 
   .slider-img {
+    z-index: 2;
+    position: relative;
+  }
+  .slider-bg-img {
     position: absolute;
-    top: -16rem;
+    top: -20rem;
+    right: -15rem;
+    animation: rotate infinite 5s linear;
   }
 }

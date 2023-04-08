@@ -24,12 +24,13 @@ export default function HighlightBanner() {
     dispatch(listSlider());
   }, [dispatch]);
 
+  console.log("filteredSlide", filteredSlide);
   return (
     <Container>
       <Row className="highlightBannerContainer mt-5">
         {!loading && filteredSlide && (
           <>
-            <Col lg={5}>
+            <Col lg={6} className="d-flex flex-column">
               <h6
                 className="category font-weight-bold"
                 style={{ color: `#${filteredSlide?.colorCode}` }}
@@ -52,25 +53,36 @@ export default function HighlightBanner() {
                   content="Find out more"
                   url={filteredSlide?.itemUrl}
                 />
-                <img src={ICONS.playDemo} alt="play video" className="mx-4" />
+                <a href={filteredSlide?.videoUrl}>
+                  <img src={ICONS.playDemo} alt="play video" className="mx-4" />
+                </a>
               </div>
+              <BannerPagination
+                slidersInfo={sliders}
+                activeSlide={activeSlide}
+                setActiveSlide={setActiveSlide}
+              />
             </Col>
-            <Col lg={7}>
+            <Col lg={6}>
               <img
                 src={`${URLS.iconsBaseUrl}/${filteredSlide?.imgUrl}`}
                 className="slider-img"
                 alt="woman"
               />
+              <img
+                src={
+                  filteredSlide?.order === 1
+                    ? ICONS.decoreBG1
+                    : filteredSlide?.order === 2
+                    ? ICONS.decoreBG2
+                    : ICONS.decoreBG3
+                }
+                className="slider-bg-img"
+                alt="bg"
+              />
             </Col>
           </>
         )}
-      </Row>
-      <Row>
-        <BannerPagination
-          slidersInfo={sliders}
-          activeSlide={activeSlide}
-          setActiveSlide={setActiveSlide}
-        />
       </Row>
     </Container>
   );

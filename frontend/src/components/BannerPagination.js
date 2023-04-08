@@ -6,7 +6,7 @@ export default function BannerPagination({
   setActiveSlide,
 }) {
   return (
-    <div className="pagination-container">
+    <div className="pagination-container mt-auto">
       {slidersInfo
         .sort((a, b) => a.order - b.order)
         .map((slide) => (
