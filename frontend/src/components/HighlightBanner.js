@@ -31,35 +31,37 @@ export default function HighlightBanner() {
         {!loading && filteredSlide && (
           <>
             <Col lg={6} className="d-flex flex-column">
-              <h6
-                className="category font-weight-bold"
-                style={{ color: `#${filteredSlide?.colorCode}` }}
-              >
-                {filteredSlide?.category}
-              </h6>
-              <h5 className="title">
-                {filteredSlide?.title}
-                <span>
-                  <img
-                    className="decore-img img-fluid"
-                    src={ICONS[`decore${filteredSlide?.order}`]}
-                    alt="decore"
+              <div className="highlightBannerContent">
+                <h6
+                  className="category font-weight-bold"
+                  style={{ color: `#${filteredSlide?.colorCode}` }}
+                >
+                  {filteredSlide?.category}
+                </h6>
+                <h5 className="title">
+                  {filteredSlide?.title}
+                  <span>
+                    <img
+                      className="decore-img img-fluid"
+                      src={ICONS[`decore${filteredSlide?.order}`]}
+                      alt="decore"
+                    />
+                  </span>
+                </h5>
+                <p className="brief">{filteredSlide?.brief}</p>
+                <div>
+                  <OrangeButton
+                    content="Find out more"
+                    url={filteredSlide?.itemUrl}
                   />
-                </span>
-              </h5>
-              <p className="brief">{filteredSlide?.brief}</p>
-              <div>
-                <OrangeButton
-                  content="Find out more"
-                  url={filteredSlide?.itemUrl}
-                />
-                <a href={filteredSlide?.videoUrl}>
-                  <img
-                    src={ICONS.playDemo}
-                    alt="play video"
-                    className="mx-4 img-fluid"
-                  />
-                </a>
+                  <a href={filteredSlide?.videoUrl}>
+                    <img
+                      src={ICONS.playDemo}
+                      alt="play video"
+                      className="mx-4 img-fluid"
+                    />
+                  </a>
+                </div>
               </div>
               <BannerPagination
                 slidersInfo={sliders}

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listCategory } from "../actions/categoryActions";
 import { newsListCategory } from "../actions/newsListingActions";
 import ICONS from "../helpers/icons";
-import { cutLongWords } from "../helpers/commons";
+import { cutLongWords, formatDate } from "../helpers/commons";
 
 export default function LatestNews() {
   const dispatch = useDispatch();
@@ -97,7 +97,7 @@ export default function LatestNews() {
                             className="img-fluid"
                             alt="calender icon"
                           />
-                          {card.publishedDate}
+                          {formatDate(card.publishedDate)}
                         </div>
                         <div className="card-category-share-addToFavourite mt-auto d-flex justify-content-between">
                           <span>
