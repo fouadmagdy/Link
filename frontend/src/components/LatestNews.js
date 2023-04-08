@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
-import { Container, Row, Col, Nav, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Nav, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { listCategory } from "../actions/categoryActions";
 import { newsListCategory } from "../actions/newsListingActions";
-import ICONS from "../helpers/icons";
-import { cutLongWords, formatDate } from "../helpers/commons";
+import NewsCards from "./NewsCards";
 
 export default function LatestNews() {
   const dispatch = useDispatch();
@@ -79,46 +78,7 @@ export default function LatestNews() {
                 filteredCards &&
                 filteredCards?.map((card) => (
                   <Col xs={12} md={6} lg={4} index={card.id} className="mb-5">
-                    <Card>
-                      <Card.Img
-                        variant="top"
-                        src={card.urlToImage}
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = `${ICONS.noImagePreview}`;
-                        }}
-                        alt="Image"
-                      />
-                      <Card.Body className="d-flex flex-column">
-                        <Card.Title>{cutLongWords(card.title, 100)}</Card.Title>
-                        <div className="card-date d-flex my-2">
-                          <img
-                            src={ICONS.calenderIcon}
-                            className="img-fluid"
-                            alt="calender icon"
-                          />
-                          {formatDate(card.publishedDate)}
-                        </div>
-                        <div className="card-category-share-addToFavourite mt-auto d-flex justify-content-between align-items-center">
-                          <span>
-                            {categoriesState &&
-                              categoriesState[+card.categoryID - 1]?.name}
-                          </span>
-                          <div>
-                            <img
-                              src={ICONS.heartIcon}
-                              alt="heart icon"
-                              className="img-fluid"
-                            />
-                            <img
-                              src={ICONS.shareIcon}
-                              alt="share icon"
-                              className="img-fluid"
-                            />
-                          </div>
-                        </div>
-                      </Card.Body>
-                    </Card>
+                    <NewsCards card={card} categoriesState={categoriesState} />
                   </Col>
                 ))}
               {showLoadMoreBtn && (

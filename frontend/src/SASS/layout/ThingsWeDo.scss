@@ -1,7 +1,7 @@
 .things-we-do {
   background: url(../../images/ThingsWeDo.png) no-repeat;
   background-size: auto;
-  background-position: -100px 0;
+  background-position: -100px 50%;
   flex-direction: column-reverse;
 
   height: 90vh;
@@ -84,6 +84,7 @@
 /* Media query for screens from 992px wide and up */
 @media (min-width: 992px) {
   .things-we-do {
+    background-position: -100px 0;
     flex-direction: row;
     .imagesContainers {
       margin-left: 5rem;
