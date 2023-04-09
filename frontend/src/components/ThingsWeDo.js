@@ -15,6 +15,7 @@ export default function ThingsWeDo() {
               />
               <div class="img-overlay"></div>
               <Button variant="outline-none" className="readMore">
+                <i class="fas fa-heart"></i>
                 Read More
               </Button>
             </div>

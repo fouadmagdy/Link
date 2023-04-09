@@ -3,6 +3,8 @@ import { cutLongWords, formatDate } from "../helpers/commons";
 import { Card } from "react-bootstrap";
 import ICONS from "../helpers/icons";
 
+import shareIcon from "../images/share-icon.png";
+
 export default function NewsCards({ card, categoriesState }) {
   return (
     <Card>
@@ -30,8 +32,12 @@ export default function NewsCards({ card, categoriesState }) {
             {categoriesState && categoriesState[+card.categoryID - 1]?.name}
           </span>
           <div>
-            <img src={ICONS.heartIcon} alt="heart icon" className="img-fluid" />
-            <img src={ICONS.shareIcon} alt="share icon" className="img-fluid" />
+            <img
+              src={ICONS.heartIcon}
+              alt="heart icon"
+              className="img-fluid mr-3"
+            />
+            <img src={shareIcon} alt="share icon" className="img-fluid" />
           </div>
         </div>
       </Card.Body>

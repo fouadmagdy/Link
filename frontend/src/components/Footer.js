@@ -1,6 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ICONS from "../helpers/icons";
+import fbIcon from "../images/social1.png";
+import instagramIcon from "../images/social2.png";
+import twitterIcon from "../images/social3.png";
 
 export default function Footer() {
   return (
@@ -46,22 +49,18 @@ export default function Footer() {
             <div className="socialMedia-navs">
               <ul class="list-unstyled">
                 <li class="d-inline">
-                  <img
-                    src={ICONS.fbIcon}
-                    className="img-fluid"
-                    alt="facebook icon"
-                  />
+                  <img src={fbIcon} className="img-fluid" alt="facebook icon" />
                 </li>
                 <li class="d-inline">
                   <img
-                    src={ICONS.instagramIcon}
+                    src={instagramIcon}
                     className="img-fluid"
                     alt="instagram icon"
                   />
                 </li>
                 <li class="d-inline">
                   <img
-                    src={ICONS.twitterIcon}
+                    src={twitterIcon}
                     className="img-fluid"
                     alt="twitter icon"
                   />

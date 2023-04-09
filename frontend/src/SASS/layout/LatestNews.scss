@@ -18,15 +18,14 @@
     color: #0f526e;
     border-radius: 10px;
     font-size: 1.5rem;
-  }
+    .nav-item {
+      margin-bottom: 1rem;
+    }
 
-  .nav-item {
-    margin-bottom: 1rem;
-  }
-
-  .nav-link.active {
-    background-color: #007bff;
-    color: white;
+    .nav-link.active {
+      background-color: #007bff;
+      color: white;
+    }
   }
 
   .card {
@@ -60,7 +59,7 @@
           color: #5e6282;
           border-radius: 10px;
           font-size: 1.5rem;
-          padding: 1rem 2rem;
+          padding: 0.5rem 1rem;
         }
       }
     }
@@ -70,6 +69,14 @@
 /* Media query for screens from 992px wide and up */
 @media (min-width: 992px) {
   .latestNews-container {
+    h6 {
+      font-size: 1.8rem;
+    }
+    .nav-link {
+      .nav-item {
+        margin-right: 1rem;
+      }
+    }
     .card {
       .card-body {
         height: 210px;
