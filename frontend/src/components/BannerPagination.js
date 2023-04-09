@@ -8,7 +8,7 @@ export default function BannerPagination({
   return (
     <div className="pagination-container">
       {slidersInfo
-        .sort((a, b) => a.order - b.order)
+        .sort((a, b) => b.order - a.order)
         .map((slide) => (
           <button
             index={slide.id}

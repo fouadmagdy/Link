@@ -3,7 +3,6 @@
   background-size: auto;
   background-position: -100px 50%;
   flex-direction: column-reverse;
-
   height: 90vh;
   background-color: #efefef;
 
@@ -40,9 +39,12 @@
         background-color: rgba(22, 42, 105, 0.5);
       }
 
-      // &:hover img {
-      //   transform: translate3d(0, 0, 10px);
-      // }
+      &.first-img {
+        &:hover {
+          transform: translate3d(0px, 5px, 60px);
+          transition: transform 0.3s linear;
+        }
+      }
 
       &:hover .readMore {
         display: block;
@@ -73,7 +75,7 @@
       margin-right: 3rem;
     }
     p {
-      font-family: OpenSans;
+      font-family: "Open Sans", sans-serif;
       font-size: 3rem;
       line-height: 1.32;
       color: #fff;
@@ -98,20 +100,22 @@
   .things-we-do {
     background-position: -100px 0;
     flex-direction: row;
+    height: 75vh;
     .imagesContainers {
       margin-left: 5rem;
       justify-content: flex-start;
     }
     .things-we-do-desc {
       margin-left: -27rem;
+      height: 52%;
       h2 {
         font-size: 5rem;
         text-align: right;
       }
       p {
         text-align: right;
-        margin-left: 24rem;
-        margin-right: 3rem;
+        margin-left: 33rem;
+        margin-right: 1rem;
       }
     }
   }

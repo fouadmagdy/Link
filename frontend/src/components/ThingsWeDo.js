@@ -7,7 +7,7 @@ export default function ThingsWeDo() {
       <Container>
         <Row>
           <div class="imagesContainers d-flex align-items-center">
-            <div className="img-container">
+            <div className="img-container first-img">
               <img
                 src={ICONS.thingsWeDo1}
                 alt="things we do 1"

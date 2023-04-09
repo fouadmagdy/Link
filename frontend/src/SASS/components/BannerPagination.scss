@@ -1,5 +1,6 @@
 .pagination-container {
-  margin: 2rem 0;
+  margin: 7rem 0;
+  height: 42px;
   text-align: center;
   .dot {
     position: relative;
@@ -43,5 +44,12 @@
 @media (min-width: 992px) {
   .pagination-container {
     text-align: left;
+    .dot {
+      margin-right: 13rem;
+    }
+    .dot:after {
+      left: 0rem;
+      width: 17rem;
+    }
   }
 }

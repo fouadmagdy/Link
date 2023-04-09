@@ -28,7 +28,7 @@
     a,
     button {
       color: #212832;
-      margin-right: 1.5rem;
+      padding: 0.5rem 2rem;
       font-size: 1.8rem;
     }
   }
@@ -38,7 +38,7 @@
 @media (min-width: 992px) {
   .navbar-component {
     text-align: left;
-
+    padding: unset;
     .navbar-brand {
       margin: unset;
     }

@@ -11,7 +11,7 @@ export default function HighlightBanner() {
   const dispatch = useDispatch();
   const sliderList = useSelector((state) => state.sliderList);
   const { loading, sliders } = sliderList;
-  const [activeSlide, setActiveSlide] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(3);
 
   const filteredSlide = useMemo(() => {
     if (!sliders || !sliders.length) {
@@ -24,7 +24,6 @@ export default function HighlightBanner() {
     dispatch(listSlider());
   }, [dispatch]);
 
-  console.log("filteredSlide", filteredSlide);
   return (
     <Container>
       <Row className="highlightBannerContainer mt-5">
