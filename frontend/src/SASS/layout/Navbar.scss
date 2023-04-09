@@ -8,12 +8,11 @@
     color: unset !important;
   }
 
-  .green-bg-clr {
-    background-color: #8dc043 !important;
-  }
-
-  .green-text-clr {
-    color: #8dc043 !important;
+  .dropdown-toggle {
+    &:after {
+      content: "⌄";
+      border: none;
+    }
   }
 
   .navbar-brand {
