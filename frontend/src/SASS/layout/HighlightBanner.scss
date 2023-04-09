@@ -51,6 +51,17 @@
 }
 
 /* Media query for screens from 992px wide and up */
+@media (min-width: 600px) and (max-width: 991px) {
+  .highlightBannerContainer {
+    .slider-bg-img {
+      width: 65%;
+      top: -19rem;
+      right: -5rem;
+    }
+  }
+}
+
+/* Media query for screens from 992px wide and up */
 @media (min-width: 992px) {
   .highlightBannerContainer {
     height: 50rem;
