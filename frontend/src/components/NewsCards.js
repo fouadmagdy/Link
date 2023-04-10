@@ -18,7 +18,7 @@ export default function NewsCards({ card, categoriesState }) {
         alt="Image"
       />
       <Card.Body className="d-flex flex-column">
-        <Card.Title>{cutLongWords(card.title, 100)}</Card.Title>
+        <Card.Title>{cutLongWords(card.title, 90)}</Card.Title>
         <div className="card-date d-flex my-2">
           <img
             src={ICONS.calenderIcon}

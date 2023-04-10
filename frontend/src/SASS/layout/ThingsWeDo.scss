@@ -104,10 +104,16 @@
     .imagesContainers {
       margin-left: 5rem;
       justify-content: flex-start;
+
+      .img-container {
+        img {
+          height: 250px;
+        }
+      }
     }
     .things-we-do-desc {
       margin-left: -27rem;
-      height: 52%;
+      height: 63%;
       h2 {
         font-size: 5rem;
         text-align: right;

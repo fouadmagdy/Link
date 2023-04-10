@@ -56,6 +56,7 @@ export default function LatestNews() {
             activeKey={activeTab}
             onSelect={handleTabClick}
             className="justify-content-center"
+            defaultActiveKey="/home"
           >
             <Nav.Item>
               <Nav.Link eventKey="all">All news</Nav.Link>
@@ -69,7 +70,7 @@ export default function LatestNews() {
               ))}
           </Nav>
 
-          <div className="card-container my-5">
+          <div className="card-container my-3">
             <Row>
               {!loadingNews && filteredCards && filteredCards?.length === 0 && (
                 <h3 className="text-center mb-3 ">No news found</h3>
@@ -77,7 +78,13 @@ export default function LatestNews() {
               {!loadingNews &&
                 filteredCards &&
                 filteredCards?.map((card) => (
-                  <Col xs={12} md={6} lg={4} index={card.id} className="mb-5">
+                  <Col
+                    xs={12}
+                    md={6}
+                    lg={4}
+                    index={card.id}
+                    className="mb-5 card-col"
+                  >
                     <NewsCards card={card} categoriesState={categoriesState} />
                   </Col>
                 ))}
