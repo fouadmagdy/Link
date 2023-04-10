@@ -18,3 +18,21 @@
     transform: scale(1);
   }
 }
+
+@keyframes transformImgX {
+  0% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+//animation general classes
+.transformImgXAnimation {
+  animation: transformImgX 0.5s !important;
+}
+.shrinkImgAnimation {
+  animation: shrink 0.5s !important;
+}

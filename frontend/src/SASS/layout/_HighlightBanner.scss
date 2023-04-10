@@ -21,7 +21,7 @@
         top: 4rem;
         left: 40%;
         z-index: -1;
-        animation: shrink 0.5s;
+        // animation: shrink 0.5s;
       }
     }
     .brief {
@@ -38,18 +38,21 @@
     }
   }
 
-  .slider-img {
-    z-index: 2;
-    position: relative;
-    width: 400px;
-    height: 400px;
-  }
-  .slider-bg-img {
-    position: absolute;
-    top: -4rem;
-    right: -10rem;
-    animation: rotate infinite 5s linear;
-    width: 80%;
+  .highlightBannerContainer-right-Content {
+    // animation: transformImgX 0.5s;
+    .slider-img {
+      z-index: 2;
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+    .slider-bg-img {
+      position: absolute;
+      top: -4rem;
+      right: -10rem;
+      animation: rotate infinite 5s linear;
+      width: 80%;
+    }
   }
 }
 
@@ -87,17 +90,19 @@
       }
     }
 
-    .slider-img {
-      width: 40vw;
-      height: 100%;
-      object-fit: contain;
-    }
+    .highlightBannerContainer-right-Content {
+      .slider-img {
+        width: 40vw;
+        height: 100%;
+        object-fit: contain;
+      }
 
-    .slider-bg-img {
-      top: -40rem;
-      right: -29rem;
-      width: 100%;
-      height: 100vh;
+      .slider-bg-img {
+        top: -40rem;
+        right: -29rem;
+        width: 100%;
+        height: 100vh;
+      }
     }
   }
 }
@@ -105,15 +110,17 @@
 /* Media query for screens from 1920px wide and up */
 @media (min-width: 1901px) {
   .highlightBannerContainer {
-    .slider-img {
-      width: 40vw;
-      height: 100%;
-      object-fit: contain;
-    }
-    .slider-bg-img {
-      top: -30rem;
-      right: -40rem;
-      width: 100%;
+    .highlightBannerContainer-right-Content {
+      .slider-img {
+        width: 40vw;
+        height: 100%;
+        object-fit: contain;
+      }
+      .slider-bg-img {
+        top: -30rem;
+        right: -40rem;
+        width: 100%;
+      }
     }
   }
 }

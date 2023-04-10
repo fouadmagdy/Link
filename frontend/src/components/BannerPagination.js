@@ -4,6 +4,7 @@ export default function BannerPagination({
   slidersInfo,
   activeSlide,
   setActiveSlide,
+  handleClickForAnimation,
 }) {
   return (
     <div className="pagination-container">
@@ -14,7 +15,10 @@ export default function BannerPagination({
             index={slide.id}
             target="_blank"
             className={`dot${slide.order === activeSlide ? " active" : ""}`}
-            onClick={() => setActiveSlide(slide.order)}
+            onClick={() => {
+              setActiveSlide(slide.order);
+              handleClickForAnimation();
+            }}
             style={{ backgroundColor: `#${slide.colorCode}` }}
           ></button>
         ))}
