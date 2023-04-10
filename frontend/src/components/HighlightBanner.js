@@ -57,7 +57,7 @@ export default function HighlightBanner() {
                     <img
                       src={ICONS.playDemo}
                       alt="play video"
-                      className="mx-5 img-fluid"
+                      className="m-5 img-fluid"
                     />
                   </a>
                 </div>
