@@ -43,6 +43,7 @@
 /* Media query for screens from 992px wide and up */
 @media (min-width: 992px) {
   .pagination-container {
+    margin: 8rem 0;
     text-align: left;
     .dot {
       margin-right: 13rem;
