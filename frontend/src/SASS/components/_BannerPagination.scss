@@ -3,27 +3,23 @@
   margin-top: auto;
   height: 42px;
   text-align: center;
+  position: relative;
+
+  .dots-img {
+    position: absolute;
+    top: 60%;
+    width: 47%;
+  }
   .dot {
     position: relative;
     width: 30px;
     height: 30px;
-    margin-right: 3rem;
+    margin-right: 6.5rem;
     border-radius: 50%;
     border: 1px solid #ccc;
     background-color: $white-color;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-  }
-  .dot:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 2rem;
-    width: 5rem;
-    height: 2px;
-    background-image: linear-gradient(to right, transparent 50%, #ccc 50%);
-    background-size: 10px 2px;
-    z-index: -1;
   }
 
   .dot:last-child::after {
@@ -40,15 +36,30 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 999px) {
+  .pagination-container {
+    .dot {
+      margin-right: 15rem;
+    }
+  }
+}
+
 /* Media query for screens from 1025px wide and up */
 @media (min-width: 1025px) {
   .pagination-container {
+    .dots-img {
+      width: 60%;
+    }
     // margin: 8rem 0;
     text-align: left;
     .dot {
       margin-right: 13rem;
       width: 40px;
       height: 40px;
+
+      &:last-child {
+        margin-right: unset;
+      }
     }
     .dot:after {
       left: 0rem;

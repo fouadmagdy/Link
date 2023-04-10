@@ -1,4 +1,5 @@
 import React from "react";
+import ICONS from "../helpers/icons";
 
 export default function BannerPagination({
   slidersInfo,
@@ -8,6 +9,7 @@ export default function BannerPagination({
 }) {
   return (
     <div className="pagination-container">
+      <img src={ICONS.dots} className="img-fluid dots-img" alt="dots img" />
       {slidersInfo
         .sort((a, b) => b.order - a.order)
         .map((slide, index) => (

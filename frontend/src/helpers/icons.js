@@ -25,6 +25,7 @@ const ICONS = {
   playstore: `${URLS.iconsBaseUrl}/PlayStore.png`,
   googlePlay: `${URLS.iconsBaseUrl}/GooglePlay.png`,
   rightArrow: `${URLS.iconsBaseUrl}/right.png`,
+  dots: `${URLS.iconsBaseUrl}/dots.png`,
 };
 
 export default ICONS;

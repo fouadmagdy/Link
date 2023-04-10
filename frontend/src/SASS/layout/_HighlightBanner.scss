@@ -70,8 +70,6 @@
 /* Media query for screens from 992px wide and up */
 @media (min-width: 768px) {
   .highlightBannerContainer {
-    // height: 50rem;
-
     .highlightBannerContent {
       .category {
         margin: 2rem 0;
@@ -110,6 +108,7 @@
 /* Media query for screens from 1920px wide and up */
 @media (min-width: 1440px) {
   .highlightBannerContainer {
+    height: 80vh;
     .highlightBannerContainer-right-Content {
       .slider-img {
         width: 40vw;
