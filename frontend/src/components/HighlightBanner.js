@@ -19,7 +19,7 @@ export default function HighlightBanner() {
 
     setTimeout(() => {
       setIsAnimating(false);
-    }, 1000);
+    }, 500);
   }, []);
 
   const filteredSlide = useMemo(() => {
