@@ -6,16 +6,16 @@ export default function ThingsWeDo() {
     <main className="things-we-do d-flex align-items-center">
       <Container>
         <Row>
-          <div class="imagesContainers d-flex align-items-center">
+          <div className="imagesContainers d-flex align-items-center">
             <div className="img-container first-img">
               <img
                 src={ICONS.thingsWeDo1}
                 alt="things we do 1"
                 className="img-fluid"
               />
-              <div class="img-overlay"></div>
+              <div className="img-overlay"></div>
               <Button variant="outline-none" className="readMore">
-                <i class="fas fa-heart"></i>
+                <i className="fas fa-heart"></i>
                 Read More
               </Button>
             </div>
@@ -27,7 +27,7 @@ export default function ThingsWeDo() {
                   alt="things we do 2"
                   className="img-fluid"
                 />
-                <div class="img-overlay"></div>
+                <div className="img-overlay"></div>
                 <Button variant="outline-none" className="readMore">
                   Read More
                 </Button>
@@ -38,7 +38,7 @@ export default function ThingsWeDo() {
                   alt="things we do 3"
                   className="img-fluid"
                 />
-                <div class="img-overlay"></div>
+                <div className="img-overlay"></div>
                 <Button variant="outline-none" className="readMore">
                   Read More
                 </Button>
@@ -51,7 +51,7 @@ export default function ThingsWeDo() {
                   alt="things we do 4"
                   className="img-fluid"
                 />
-                <div class="img-overlay"></div>
+                <div className="img-overlay"></div>
                 <Button variant="outline-none" className="readMore">
                   Read More
                 </Button>
@@ -62,7 +62,7 @@ export default function ThingsWeDo() {
                   alt="things we do 5"
                   className="img-fluid"
                 />
-                <div class="img-overlay"></div>
+                <div className="img-overlay"></div>
                 <Button variant="outline-none" className="readMore">
                   Read More
                 </Button>

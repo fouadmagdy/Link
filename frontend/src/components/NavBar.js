@@ -2,16 +2,19 @@ import React from "react";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import ICONS from "../helpers/icons";
 import { Container } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 export default function NavBar() {
   return (
     <Container>
       <Navbar expand="lg" className="navbar-component">
         <Navbar.Brand href="#home">
-          <img
-            src={ICONS.linkLogo}
-            alt="logo"
-            className="d-inline-block align-top img-fluid"
-          />
+          <LinkContainer to="/">
+            <img
+              src={ICONS.linkLogo}
+              alt="logo"
+              className="d-inline-block align-top img-fluid"
+            />
+          </LinkContainer>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

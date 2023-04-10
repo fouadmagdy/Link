@@ -64,7 +64,7 @@ export default function LatestNews() {
             {!loadingCategories &&
               categoriesState &&
               categoriesState?.map((cat) => (
-                <Nav.Item index={cat.id}>
+                <Nav.Item key={cat.id}>
                   <Nav.Link eventKey={cat.id}>{cat.name}</Nav.Link>
                 </Nav.Item>
               ))}
@@ -77,12 +77,12 @@ export default function LatestNews() {
               )}
               {!loadingNews &&
                 filteredCards &&
-                filteredCards?.map((card) => (
+                filteredCards?.map((card, index) => (
                   <Col
+                    key={index}
                     xs={12}
                     md={6}
                     lg={4}
-                    index={card.id}
                     className="mb-5 card-col"
                   >
                     <NewsCards card={card} categoriesState={categoriesState} />

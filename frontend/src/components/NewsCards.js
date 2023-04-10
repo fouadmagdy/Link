@@ -1,4 +1,5 @@
 import React from "react";
+import { LinkContainer } from "react-router-bootstrap";
 import { cutLongWords, formatDate } from "../helpers/commons";
 import { Card } from "react-bootstrap";
 import ICONS from "../helpers/icons";
@@ -10,7 +11,7 @@ export default function NewsCards({ card, categoriesState }) {
     <Card>
       <Card.Img
         variant="top"
-        src={card.urlToImage}
+        src={card?.urlToImage}
         onError={(e) => {
           e.target.onerror = null;
           e.target.src = `${ICONS.noImagePreview}`;
@@ -18,14 +19,17 @@ export default function NewsCards({ card, categoriesState }) {
         alt="Image"
       />
       <Card.Body className="d-flex flex-column">
-        <Card.Title>{cutLongWords(card.title, 90)}</Card.Title>
+        <LinkContainer to={`/details/${card?.categoryID}`}>
+          <Card.Title>{cutLongWords(card?.title, 90)}</Card.Title>
+        </LinkContainer>
+
         <div className="card-date d-flex my-2">
           <img
             src={ICONS.calenderIcon}
             className="img-fluid"
             alt="calender icon"
           />
-          {formatDate(card.publishedDate)}
+          {formatDate(card?.publishedDate)}
         </div>
         <div className="card-category-share-addToFavourite mt-auto d-flex justify-content-between align-items-center">
           <span>

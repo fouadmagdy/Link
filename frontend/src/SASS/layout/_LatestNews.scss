@@ -44,6 +44,7 @@
       .card-title {
         color: $paragraph-color;
         font-size: 2.5rem;
+        cursor: pointer;
       }
       .card-date {
         color: $date-color;
@@ -58,7 +59,7 @@
           color: $paragraph-color;
           border-radius: 10px;
           font-size: 1.5rem;
-          padding: 0.3rem 1rem;
+          padding: 0.1rem 1rem;
           width: 110px;
           height: 24px;
           text-align: center;

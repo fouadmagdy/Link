@@ -47,18 +47,18 @@ export default function Footer() {
           </Col>
           <Col xs={12} md={3}>
             <div className="socialMedia-navs">
-              <ul class="list-unstyled">
-                <li class="d-inline">
+              <ul className="list-unstyled">
+                <li className="d-inline">
                   <img src={fbIcon} className="img-fluid" alt="facebook icon" />
                 </li>
-                <li class="d-inline">
+                <li className="d-inline">
                   <img
                     src={instagramIcon}
                     className="img-fluid"
                     alt="instagram icon"
                   />
                 </li>
-                <li class="d-inline">
+                <li className="d-inline">
                   <img
                     src={twitterIcon}
                     className="img-fluid"
@@ -70,14 +70,14 @@ export default function Footer() {
             <div className="discover-our-app">
               <p className="pl-3">Discover our app</p>
               <ul className="list-unstyled">
-                <li class="d-inline">
+                <li className="d-inline">
                   <img
                     src={ICONS.googlePlay}
                     className="img-fluid"
                     alt="google play"
                   />
                 </li>
-                <li class="d-inline">
+                <li className="d-inline">
                   <img
                     src={ICONS.playstore}
                     className="img-fluid"

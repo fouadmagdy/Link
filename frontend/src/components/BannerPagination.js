@@ -10,9 +10,9 @@ export default function BannerPagination({
     <div className="pagination-container">
       {slidersInfo
         .sort((a, b) => b.order - a.order)
-        .map((slide) => (
+        .map((slide, index) => (
           <button
-            index={slide.id}
+            key={slide.id}
             target="_blank"
             className={`dot${slide.order === activeSlide ? " active" : ""}`}
             onClick={() => {

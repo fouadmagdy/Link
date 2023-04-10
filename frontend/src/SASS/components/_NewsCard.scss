@@ -1,0 +1,42 @@
+.news-card-container {
+  .card {
+    border-radius: 24px;
+    box-shadow: -5px 22px 37px 0px rgba(0, 0, 0, 0.2);
+
+    .card-img-top {
+      border-top-right-radius: 24px;
+      border-top-left-radius: 24px;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      // height: 190px;
+      padding: 2rem;
+      .card-title {
+        color: $paragraph-color;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+      .card-date {
+        color: $date-color;
+        font-size: 1.5rem;
+        img {
+          margin-right: 0.8rem;
+        }
+      }
+      .card-category-share-addToFavourite {
+        span {
+          background-color: #74747433;
+          color: $paragraph-color;
+          border-radius: 10px;
+          font-size: 1.5rem;
+          padding: 0.1rem 1rem;
+          width: 130px;
+          height: 24px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
