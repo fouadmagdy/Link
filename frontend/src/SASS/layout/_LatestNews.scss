@@ -29,7 +29,7 @@
 
   .card {
     border-radius: 24px;
-    box-shadow: -5px 22px 37px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: -5px 22px 37px 0px rgba(0, 0, 0, 0.2);
 
     .card-img-top {
       border-top-right-radius: 24px;
@@ -58,7 +58,10 @@
           color: $paragraph-color;
           border-radius: 10px;
           font-size: 1.5rem;
-          padding: 0.5rem 1rem;
+          padding: 0.3rem 1rem;
+          width: 110px;
+          height: 24px;
+          text-align: center;
         }
       }
     }

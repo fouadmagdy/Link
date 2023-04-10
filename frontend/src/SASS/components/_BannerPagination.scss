@@ -1,5 +1,5 @@
 .pagination-container {
-  margin: 7rem 0;
+  margin: 3rem 0;
   height: 42px;
   text-align: center;
   .dot {
@@ -33,24 +33,29 @@
 
   .dot.active {
     background-color: $blue-color;
-    // border-color: $blue-color;
     color: $white-color;
     width: 40px;
     height: 40px;
   }
 }
 
-/* Media query for screens from 992px wide and up */
-@media (min-width: 992px) {
+/* Media query for screens from 1025px wide and up */
+@media (min-width: 1025px) {
   .pagination-container {
-    margin: 8rem 0;
+    // margin: 8rem 0;
     text-align: left;
     .dot {
       margin-right: 13rem;
+      width: 40px;
+      height: 40px;
     }
     .dot:after {
       left: 0rem;
       width: 17rem;
+    }
+    .dot.active {
+      width: 50px;
+      height: 50px;
     }
   }
 }

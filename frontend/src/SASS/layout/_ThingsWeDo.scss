@@ -73,10 +73,11 @@
       text-align: center;
       color: $h2-color;
       margin-right: 3rem;
+      margin-bottom: 2rem;
     }
     p {
       font-family: "Open Sans", sans-serif;
-      font-size: 3rem;
+      font-size: 2rem;
       line-height: 1.32;
       color: $white-color;
       text-align: center;
@@ -98,9 +99,10 @@
 /* Media query for screens from 1025px wide and up */
 @media (min-width: 1025px) {
   .things-we-do {
-    background-position: -140px 0;
+    background-position: -140px -14px;
     flex-direction: row;
-    height: 75vh;
+    height: 85vh;
+    padding: 5rem 0;
     .imagesContainers {
       margin-left: 5rem;
       justify-content: flex-start;
@@ -113,7 +115,7 @@
     }
     .things-we-do-desc {
       margin-left: -27rem;
-      height: 75%;
+      height: 65%;
       h2 {
         font-size: 5rem;
         text-align: right;
@@ -122,6 +124,7 @@
         text-align: right;
         margin-left: 32rem;
         margin-right: 1rem;
+        font-size: 3rem;
       }
     }
   }

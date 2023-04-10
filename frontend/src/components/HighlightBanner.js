@@ -62,6 +62,11 @@ export default function HighlightBanner() {
                   </a>
                 </div>
               </div>
+              <BannerPagination
+                slidersInfo={sliders}
+                activeSlide={activeSlide}
+                setActiveSlide={setActiveSlide}
+              />
             </Col>
             <Col xs={12} lg={6}>
               <img
@@ -84,11 +89,6 @@ export default function HighlightBanner() {
           </>
         )}
       </Row>
-      <BannerPagination
-        slidersInfo={sliders}
-        activeSlide={activeSlide}
-        setActiveSlide={setActiveSlide}
-      />
     </Container>
   );
 }

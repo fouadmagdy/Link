@@ -68,20 +68,20 @@ export default function Footer() {
               </ul>
             </div>
             <div className="discover-our-app">
-              <p>Discover our app</p>
+              <p className="pl-3">Discover our app</p>
               <ul className="list-unstyled">
-                <li class="d-inline">
-                  <img
-                    src={ICONS.playstore}
-                    className="img-fluid"
-                    alt="play store"
-                  />
-                </li>
                 <li class="d-inline">
                   <img
                     src={ICONS.googlePlay}
                     className="img-fluid"
                     alt="google play"
+                  />
+                </li>
+                <li class="d-inline">
+                  <img
+                    src={ICONS.playstore}
+                    className="img-fluid"
+                    alt="play store"
                   />
                 </li>
               </ul>

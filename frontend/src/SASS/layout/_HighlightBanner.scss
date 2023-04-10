@@ -1,10 +1,10 @@
 .highlightBannerContainer {
   height: 100%;
   .highlightBannerContent {
-    height: 420px;
+    // height: 420px;
     .category {
       color: $pink-color;
-      font-size: 20px;
+      font-size: 2rem;
       font-family: "Poppins", sans-serif;
       font-weight: bold;
       text-transform: uppercase;
@@ -65,7 +65,7 @@
 /* Media query for screens from 992px wide and up */
 @media (min-width: 992px) {
   .highlightBannerContainer {
-    height: 50rem;
+    // height: 50rem;
 
     .highlightBannerContent {
       .category {
