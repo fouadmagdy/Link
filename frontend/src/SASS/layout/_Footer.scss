@@ -3,9 +3,25 @@
   padding: 3rem 0;
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
+  .footer-container-logo {
+    width: 130px;
+    height: auto;
+  }
+  h5 {
+    margin-bottom: 2rem;
+  }
+  ul {
+    li {
+      color: $paragraph-color;
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
 
   .footer-desc {
     color: $paragraph-color;
+    font-size: 1.5rem;
   }
 
   h5 {
@@ -22,6 +38,9 @@
     }
   }
   .discover-our-app {
+    p {
+      font-size: 1.5rem;
+    }
     img:first-child {
       margin-right: 1rem;
       margin-bottom: 1rem;
@@ -34,5 +53,9 @@
   .footer-container {
     text-align: left;
     font-size: 1.3rem;
+
+    .footer-desc {
+      font-size: 1.2rem;
+    }
   }
 }

@@ -98,7 +98,7 @@
 /* Media query for screens from 1025px wide and up */
 @media (min-width: 1025px) {
   .things-we-do {
-    background-position: -100px 0;
+    background-position: -140px 0;
     flex-direction: row;
     height: 75vh;
     .imagesContainers {
@@ -107,20 +107,20 @@
 
       .img-container {
         img {
-          height: 220px;
+          height: 250px;
         }
       }
     }
     .things-we-do-desc {
       margin-left: -27rem;
-      height: 63%;
+      height: 75%;
       h2 {
         font-size: 5rem;
         text-align: right;
       }
       p {
         text-align: right;
-        margin-left: 33rem;
+        margin-left: 32rem;
         margin-right: 1rem;
       }
     }

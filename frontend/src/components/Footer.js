@@ -13,7 +13,7 @@ export default function Footer() {
           <Col xs={12} md={3}>
             <img
               src={ICONS.linkLogo}
-              className="img-fluid mb-4"
+              className="img-fluid mb-4 footer-container-logo"
               alt="link logo"
             />
             <p className="footer-desc">
