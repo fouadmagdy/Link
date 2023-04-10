@@ -3,7 +3,7 @@
   .highlightBannerContent {
     height: 420px;
     .category {
-      color: #f215b6;
+      color: $pink-color;
       font-size: 20px;
       font-family: "Poppins", sans-serif;
       font-weight: bold;
@@ -24,7 +24,7 @@
       }
     }
     .brief {
-      color: #5e6282;
+      color: $title-color;
 
       font-size: 2rem;
       padding-bottom: 1.5rem;

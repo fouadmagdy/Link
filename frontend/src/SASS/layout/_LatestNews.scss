@@ -5,7 +5,7 @@
   background-position: top 50px right 10px;
 
   h6 {
-    color: #5e6282;
+    color: $paragraph-color;
     font-family: "Poppins", sans-serif;
     font-size: 2.5rem;
   }
@@ -21,9 +21,9 @@
     font-size: 1.5rem;
     margin-bottom: 2rem;
     &.active {
-      background-color: #0eceff !important;
+      background-color: $blue-color !important;
       box-shadow: 0px 20px 70px #f1a50126;
-      color: white !important;
+      color: $white-color !important;
     }
   }
 
@@ -42,11 +42,11 @@
       height: 190px;
       padding: 2rem;
       .card-title {
-        color: #5e6282;
+        color: $paragraph-color;
         font-size: 2.5rem;
       }
       .card-date {
-        color: #707070;
+        color: $date-color;
         font-size: 2rem;
         img {
           margin-right: 0.8rem;
@@ -55,7 +55,7 @@
       .card-category-share-addToFavourite {
         span {
           background-color: #74747433;
-          color: #5e6282;
+          color: $paragraph-color;
           border-radius: 10px;
           font-size: 1.5rem;
           padding: 0.5rem 1rem;

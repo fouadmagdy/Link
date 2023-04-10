@@ -4,7 +4,7 @@
   background-position: -100px 50%;
   flex-direction: column-reverse;
   height: 90vh;
-  background-color: #efefef;
+  background-color: $lightGray-color;
 
   .imagesContainers {
     z-index: 2;
@@ -22,7 +22,7 @@
       }
       .readMore {
         position: absolute;
-        color: #fff;
+        color: $white-color;
         left: 1.3rem;
         bottom: 1rem;
         display: none;
@@ -61,7 +61,7 @@
   }
 
   .things-we-do-desc {
-    background-color: #f215b6;
+    background-color: $pink-color;
     height: 50%;
     z-index: 1;
     margin-bottom: 3rem;
@@ -71,14 +71,14 @@
       font-size: 3rem;
       line-height: 1.45;
       text-align: center;
-      color: #253776;
+      color: $h2-color;
       margin-right: 3rem;
     }
     p {
       font-family: "Open Sans", sans-serif;
       font-size: 3rem;
       line-height: 1.32;
-      color: #fff;
+      color: $white-color;
       text-align: center;
     }
   }
