@@ -24,6 +24,7 @@ const ICONS = {
   twitterIcon: `${URLS.iconsBaseUrl}/social3.svg`,
   playstore: `${URLS.iconsBaseUrl}/PlayStore.png`,
   googlePlay: `${URLS.iconsBaseUrl}/GooglePlay.png`,
+  rightArrow: `${URLS.iconsBaseUrl}/right.png`,
 };
 
 export default ICONS;

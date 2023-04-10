@@ -15,7 +15,11 @@ export default function ThingsWeDo() {
               />
               <div className="img-overlay"></div>
               <Button variant="outline-none" className="readMore">
-                <i className="fas fa-heart"></i>
+                <img
+                  src={ICONS.rightArrow}
+                  alt="right arrow"
+                  className="img-fluid readMore-arrow"
+                />
                 Read More
               </Button>
             </div>
@@ -29,6 +33,11 @@ export default function ThingsWeDo() {
                 />
                 <div className="img-overlay"></div>
                 <Button variant="outline-none" className="readMore">
+                  <img
+                    src={ICONS.rightArrow}
+                    alt="right arrow"
+                    className="img-fluid readMore-arrow"
+                  />
                   Read More
                 </Button>
               </div>
@@ -40,6 +49,11 @@ export default function ThingsWeDo() {
                 />
                 <div className="img-overlay"></div>
                 <Button variant="outline-none" className="readMore">
+                  <img
+                    src={ICONS.rightArrow}
+                    alt="right arrow"
+                    className="img-fluid readMore-arrow"
+                  />
                   Read More
                 </Button>
               </div>
@@ -53,6 +67,11 @@ export default function ThingsWeDo() {
                 />
                 <div className="img-overlay"></div>
                 <Button variant="outline-none" className="readMore">
+                  <img
+                    src={ICONS.rightArrow}
+                    alt="right arrow"
+                    className="img-fluid readMore-arrow"
+                  />
                   Read More
                 </Button>
               </div>
@@ -64,6 +83,11 @@ export default function ThingsWeDo() {
                 />
                 <div className="img-overlay"></div>
                 <Button variant="outline-none" className="readMore">
+                  <img
+                    src={ICONS.rightArrow}
+                    alt="right arrow"
+                    className="img-fluid readMore-arrow"
+                  />
                   Read More
                 </Button>
               </div>

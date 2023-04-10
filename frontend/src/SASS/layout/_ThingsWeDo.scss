@@ -24,8 +24,13 @@
         position: absolute;
         color: $white-color;
         left: 1.3rem;
-        bottom: 1rem;
+        bottom: 0.1rem;
         display: none;
+        .readMore-arrow {
+          width: 17px;
+          height: 15px;
+          margin-right: 1rem;
+        }
       }
 
       .img-overlay {
@@ -110,6 +115,9 @@
       .img-container {
         img {
           height: 250px;
+        }
+        .readMore {
+          bottom: 1rem;
         }
       }
     }
