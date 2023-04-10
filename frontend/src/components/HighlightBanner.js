@@ -68,10 +68,10 @@ export default function HighlightBanner() {
                 setActiveSlide={setActiveSlide}
               />
             </Col>
-            <Col xs={12} lg={6}>
+            <Col xs={12} lg={6} className="text-center">
               <img
                 src={`${URLS.iconsBaseUrl}/${filteredSlide?.imgUrl}`}
-                className="slider-img img-fluid"
+                className="slider-img"
                 alt="woman"
               />
               <img

@@ -12,6 +12,7 @@
     .title {
       color: #181e4b;
       font-size: 5rem;
+      font-family: "Open Sans", sans-serif;
       font-weight: bold;
       position: relative;
       padding: 2rem 0;
@@ -24,7 +25,7 @@
       }
     }
     .brief {
-      color: $title-color;
+      color: $paragraph-color;
 
       font-size: 2rem;
       padding-bottom: 1.5rem;
@@ -69,7 +70,7 @@
 
     .highlightBannerContent {
       .category {
-        margin: 3rem 0;
+        margin: 2rem 0;
       }
 
       .title {
@@ -95,6 +96,22 @@
       right: -29rem;
       width: 100%;
       height: 100vh;
+    }
+  }
+}
+
+/* Media query for screens from 1920px wide and up */
+@media (min-width: 1901px) {
+  .highlightBannerContainer {
+    .slider-img {
+      width: 40vw;
+      height: 100%;
+      object-fit: contain;
+    }
+    .slider-bg-img {
+      top: -30rem;
+      right: -40rem;
+      width: 100%;
     }
   }
 }
